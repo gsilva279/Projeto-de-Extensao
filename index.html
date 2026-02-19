@@ -4,88 +4,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wagner Gráfica Rápida</title>
+    <title>Wagner Grafica Rapida</title>
+    <meta name="description" content="Wagner Grafica Rapida - Qualidade e eficiencia em impressao grafica. Servicos profissionais de impressao com atendimento personalizado.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
     <!--Menu-->
-    <header>
-        <div class="logo"> Gráfica Rápida</div>
-        <nav>
+    <header id="header">
+        <div class="logo">
+            <span class="logo-icon"><i class="fas fa-print"></i></span>
+            Grafica Rapida
+        </div>
+        <nav id="nav-menu">
             <ul>
-                <li> <a href="#">Inicio</a></li>
-                <li> <a href="#">Sobre</a></li>
-                <li> <a href="#">Setviços</a></li>
-                <li> <a href="#">Contato</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Servicos</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <!--banner principal-->
-    <section class="hero">
-        <div class="hero-content">
-            <h1> Wagner Gráfica Rápida <span> qualidade e eficiênica</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae error esse libero quaerat eveniet ipsum
-                molestias illo dolores unde obcaecati magni illum eos rem fugit beatae, culpa harum dolore ducimus!</p>
-            <a href="#" class="btn"> Contato </a>
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <span class="hero-badge">Desde 2010</span>
+            <h1>Wagner Grafica Rapida <span>qualidade e eficiencia</span></h1>
+            <p>Transformamos suas ideias em impressoes de alta qualidade. Atendimento personalizado, prazos rapidos e resultados que impressionam.</p>
+            <div class="hero-actions">
+                <a href="#contato" class="btn btn-primary">Solicitar Orcamento</a>
+                <a href="#servicos" class="btn btn-outline">Ver Servicos</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Role para baixo</span>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!--Sobre-->
-    <section class="sobre">
-        <div class="sobre-img">
-            <img src="images/img-sobre.png" alt="imagem-dono">
+    <section class="sobre" id="sobre">
+        <div class="sobre-img reveal reveal-left">
+            <img src="images/img-sobre.png" alt="Imagem do proprietario da grafica">
         </div>
-        <div class="sobre-content">
-            <h2 class="sobre-titulo"> Sobre mim</h2>
+        <div class="sobre-content reveal reveal-right">
+            <span class="section-label">Quem Somos</span>
+            <h2 class="sobre-titulo">Sobre mim</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium voluptatem architecto a expedita
                 impedit nisi. Itaque non veniam ut fugiat vero quis? Necessitatibus hic impedit enim ducimus, provident
                 error ipsa.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ducimus animi vel, quos libero fugiat
                 atque et veritatis nobis aliquam, error tenetur harum ea, praesentium nam cum eveniet recusandae a?</p>
-            <a href="#" class="btn"> Instagram </a>
+            <div class="sobre-stats">
+                <div class="stat">
+                    <strong>15+</strong>
+                    <span>Anos de experiencia</span>
+                </div>
+                <div class="stat">
+                    <strong>5k+</strong>
+                    <span>Projetos entregues</span>
+                </div>
+                <div class="stat">
+                    <strong>100%</strong>
+                    <span>Satisfacao</span>
+                </div>
+            </div>
+            <a href="https://instagram.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
         </div>
     </section>
 
-    <!--Serviços-->
-    <section class="servicos">
-        <div class="servicos-header">
-            <h2 class="sobre-title"> Meus Serviços </h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, optio. Maxime similique minima illum
-                vel! Dolorum repellendus ratione veniam provident veritatis aliquid quaerat libero reiciendis delectus
-                optio? Inventore, quidem debitis.</p>
+    <!--Servicos-->
+    <section class="servicos" id="servicos">
+        <div class="servicos-header reveal">
+            <span class="section-label">O Que Fazemos</span>
+            <h2 class="section-title">Nossos Servicos</h2>
+            <p>Oferecemos uma gama completa de servicos graficos para atender todas as suas necessidades de impressao com qualidade profissional.</p>
         </div>
         <div class="servicos-grid">
             <!--Card 1-->
-            <div class="card">
+            <div class="card reveal">
                 <div class="card-img" style="background-image: url('images/img-sobre.png');"></div>
                 <div class="card-content">
-                    <h2>Impressão 1</h2>
+                    <div class="card-icon"><i class="fas fa-print"></i></div>
+                    <h2>Impressao Digital</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, itaque laboriosam culpa cum alias
-                        quam autem commodi repellendus, illo blanditiis mollitia aliquam nisi, sunt ad! Distinctio
-                        minima quas ad sint.</p>
+                        quam autem commodi repellendus, illo blanditiis mollitia aliquam nisi.</p>
+                    <a href="#contato" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <!-- Card 2 -->
-            <div class="card">
+            <div class="card reveal">
                 <div class="card-img" style="background-image: url('images/img-sobre.png');"></div>
                 <div class="card-content">
-                    <h2>Impressão 2</h2>
+                    <div class="card-icon"><i class="fas fa-palette"></i></div>
+                    <h2>Design Grafico</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, itaque laboriosam culpa cum alias
-                        quam autem commodi repellendus, illo blanditiis mollitia aliquam nisi, sunt ad! Distinctio
-                        minima quas ad sint.</p>
+                        quam autem commodi repellendus, illo blanditiis mollitia aliquam nisi.</p>
+                    <a href="#contato" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <!-- Card 3 -->
-            <div class="card">
+            <div class="card reveal">
                 <div class="card-img" style="background-image: url('images/img-sobre.png');"></div>
                 <div class="card-content">
-                    <h2>Impressão 3</h2>
+                    <div class="card-icon"><i class="fas fa-box-open"></i></div>
+                    <h2>Embalagens</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, itaque laboriosam culpa cum alias
-                        quam autem commodi repellendus, illo blanditiis mollitia aliquam nisi, sunt ad! Distinctio
-                        minima quas ad sint.</p>
+                        quam autem commodi repellendus, illo blanditiis mollitia aliquam nisi.</p>
+                    <a href="#contato" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -93,81 +133,168 @@
 
     <!-- Depoimentos -->
     <section id="depoimentos" class="depoimentos">
-        <h2 class="title">Depoimentos</h2>
-        <p>Veja o que meus clientes tem a dizer sobre nossos produtos</p>
+        <div class="depoimentos-header reveal">
+            <span class="section-label">Feedback</span>
+            <h2 class="section-title">Depoimentos</h2>
+            <p>Veja o que nossos clientes tem a dizer sobre nossos produtos e servicos</p>
+        </div>
 
         <div class="depoimentos-grid">
             <!-- depoimento 1 -->
-            <div class="depoimentos-card">
-                <div class="depoimento-foto">
-                    <img src="images/img-sobre.png" alt="">
-                </div>
+            <div class="depoimentos-card reveal">
+                <div class="depoimento-aspas"><i class="fas fa-quote-left"></i></div>
                 <div class="depoimentos-conteudo">
-                    <h3>Nome</h3>
-                    <div class="estrelas">&star;&star;&star;&star;&star;</div>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt fugit, sapiente, officia modi
                         velit soluta distinctio molestias dolor aliquid laudantium eveniet sequi? Ratione minima
                         cupiditate corporis commodi voluptatibus cum aspernatur.
                     </p>
+                </div>
+                <div class="depoimento-autor">
+                    <div class="depoimento-foto">
+                        <img src="images/img-sobre.png" alt="Foto do cliente">
+                    </div>
+                    <div class="depoimento-info">
+                        <h3>Maria Silva</h3>
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- depoimento 2 -->
-            <div class="depoimentos-card">
-                <div class="depoimento-foto">
-                    <img src="images/img-sobre.png" alt="">
-                </div>
+            <div class="depoimentos-card reveal">
+                <div class="depoimento-aspas"><i class="fas fa-quote-left"></i></div>
                 <div class="depoimentos-conteudo">
-                    <h3>Nome</h3>
-                    <div class="estrelas">&star;&star;&star;&star;&star;</div>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt fugit, sapiente, officia modi
                         velit soluta distinctio molestias dolor aliquid laudantium eveniet sequi? Ratione minima
                         cupiditate corporis commodi voluptatibus cum aspernatur.
                     </p>
+                </div>
+                <div class="depoimento-autor">
+                    <div class="depoimento-foto">
+                        <img src="images/img-sobre.png" alt="Foto do cliente">
+                    </div>
+                    <div class="depoimento-info">
+                        <h3>Joao Santos</h3>
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- depoimento 3 -->
-            <div class="depoimentos-card">
-                <div class="depoimento-foto">
-                    <img src="images/img-sobre.png" alt="">
-                </div>
+            <div class="depoimentos-card reveal">
+                <div class="depoimento-aspas"><i class="fas fa-quote-left"></i></div>
                 <div class="depoimentos-conteudo">
-                    <h3>Nome</h3>
-                    <div class="estrelas">&star;&star;&star;&star;&star;</div>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt fugit, sapiente, officia modi
                         velit soluta distinctio molestias dolor aliquid laudantium eveniet sequi? Ratione minima
                         cupiditate corporis commodi voluptatibus cum aspernatur.
                     </p>
+                </div>
+                <div class="depoimento-autor">
+                    <div class="depoimento-foto">
+                        <img src="images/img-sobre.png" alt="Foto do cliente">
+                    </div>
+                    <div class="depoimento-info">
+                        <h3>Ana Oliveira</h3>
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- contatos -->
-    <section class="contato">
-        <h2 class="contatos-title"> Contato </h2>
-        <p>Entre em contato agora mesmo para começar sua transformação:</p>
-        <a href="https://wa.me/5581993000912" class="btn" rel="noopener noreferrer">
-            <i class="fab fa-whatsapp"> Fale comigo no WhatsApp</i>
-        </a>
+    <section class="contato" id="contato">
+        <div class="contato-wrapper reveal">
+            <div class="contato-info">
+                <span class="section-label section-label-light">Fale Conosco</span>
+                <h2 class="contatos-title">Vamos Conversar?</h2>
+                <p>Entre em contato agora mesmo para comecar seu projeto. Respondemos em ate 24 horas!</p>
+                <div class="contato-details">
+                    <div class="contato-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(81) 99300-0912</span>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@graficrapida.com</span>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Recife, PE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contato-action">
+                <a href="https://wa.me/5581993000912" class="btn btn-whatsapp" rel="noopener noreferrer" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Fale pelo WhatsApp
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- chamada para ação -->
+    <!-- chamada para acao -->
     <section class="cta">
-        <h2>Wagner Gráfica Rápida</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos est recusandae facilis voluptatem sint facere
-            nihil, qui provident eveniet eius quam quo excepturi sapiente. Sunt sint consequuntur at mollitia
-            reiciendis.</p>
-        <a href="https://wa.me/5581993000912" class="btn">Entre em contato</a>
+        <div class="cta-content reveal">
+            <h2>Pronto para Transformar suas Ideias em Realidade?</h2>
+            <p>Wagner Grafica Rapida - Qualidade, agilidade e compromisso com o seu projeto. Solicite um orcamento sem compromisso.</p>
+            <a href="https://wa.me/5581993000912" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Entre em contato</a>
+        </div>
     </section>
 
-    <!-- rodapé -->
-    <footer class="rodapé">
-        <p>&copy; 2026 gsilva - Todos os direitos reservados</p>
+    <!-- rodape -->
+    <footer class="rodape">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-print"></i></span>
+                    Grafica Rapida
+                </div>
+                <p>Qualidade e eficiencia em servicos graficos desde 2010.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rapidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Servicos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/5581993000912" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 gsilva - Todos os direitos reservados</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
